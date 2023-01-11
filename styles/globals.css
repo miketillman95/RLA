@@ -1,3 +1,6 @@
+body {
+  background-color: black;
+}
 
 /* Home page */
 .center-board {
@@ -11,11 +14,23 @@
 .home-links {
   margin-top: 200px;
 }
-body {
-  background-color: black ;
+/* Home page  */
+
+/* Shop page */
+.shop-center{
+  background-color: white;
+  border: 5px;
+  border-style: solid;
+  border-color: red;
+  text-align: center;
+
+  /* height: 150px;
+  line-height: 100px; */
+  margin-top: 100px;
 }
 
-/* Home page  */
+
+/* Shop page */
 
 
 

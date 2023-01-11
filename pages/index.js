@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import {client} from '../lib/client'
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +18,7 @@ return (
 		<div className= 'center-board'>
 		<h1>ROWDY LA IMAGE</h1>
 			<div className='home-links'></div>
-				<p>Shop</p>
+				<Link style={{textDecoration: 'none', color: 'white'}} href='/Shop'><p>Shop</p></Link>
 				<p>About</p>
 				<p></p>
 			</div>
@@ -27,11 +27,3 @@ return (
 )
 }
 
-export async function getStaticProps() {
-
-	const products = await client.fetch(`*[_type == 'product']`)
-
-	return {
-		props: {products}
-	}
-}
