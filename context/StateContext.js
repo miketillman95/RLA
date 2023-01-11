@@ -17,6 +17,10 @@ export const StateContext = () => {
     }
 
 return (
-    <div>StateContext</div>
+    <><Context.Provider>
+        value={{
+            onAdd
+        }}
+    </Context.Provider></>
 )
 }
