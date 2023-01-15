@@ -1,26 +1,32 @@
 import React from 'react'
 import {client} from '../lib/client'
 import Link from 'next/link'
+import Product from '../components/Product'
 
 
-const Shop = () => {
+const Shop = ({products}) => {
 return (
     <>
-        <body className='shop-center'>
+        <div className='shop-center'>
             <Link style={{color: 'black', textDecoration: 'none'}}href='/'> <h1>Shop</h1></Link>
-
-        </body>
+        <div className='product-container'>
+                { products?.map((product) => <Product key= {products._id} product= {product}/>)}
+            </div>
+        </div>
     </>
 )
 }
 
 
-export async function getStaticProps() {
+export const getServerSideProps = async () => {
+    const query = '*[_type == "product"]'
+    const products = await client.fetch(query)
 
-	const products = await client.fetch(`*[_type == 'product']`)
+    // const bannerQuery = '*[_type =="banner"]'
+    // const bannerData = await client.fetch(bannerQuery)
 
-	return {
-		props: {products}
-	}
+    return {
+        props: {products}
+    }
 }
 export default Shop

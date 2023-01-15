@@ -29,6 +29,17 @@ body {
   margin-top: 100px;
 }
 
+.product-container {
+  display: flex; 
+  justify-content: center;
+  margin-top: 80px;
+  margin-right: 40px;
+}
+
+.product-name {
+  font-weight: 500;
+  text-decoration: 'none';
+}
 
 /* Shop page */
 
