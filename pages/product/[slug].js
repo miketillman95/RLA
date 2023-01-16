@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 const ProductDetails = () => {
 return (
-    <div>ProductDetails</div>
+    <div></div>
 )
 }
 
