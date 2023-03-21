@@ -49,19 +49,27 @@ body {
 
 /*  slug page*/
 
-.product-detail-container{
-  display: flex;
+.product-detail-containment{
+display: flex;
  gap: 40px;
  margin: 40px;
  margin-top: 60px;
  color: #324d67;
+ border: 10px;
+ flex-direction: row;
 
 }
+.product-detail-container{
+  flex-wrap: wrap;
+  }
+.product-detail-container .product-detail-image{
+  width: 350px;
+  height: 350px;
 
+}
 .product-detail-image{
   border-radius: 15px;
-   background-color: #ebebeb;
-
+  background-color: #ebebeb;
   width: 400px;
   height: 400px;
   cursor: pointer;
@@ -70,6 +78,9 @@ body {
 .product-detail-image:hover{
   background-color: #f02d34;
 
+}
+.product-detail-container{
+  margin: 20px;
 }
 .small-images-container{
   display: flex;
