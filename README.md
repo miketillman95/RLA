@@ -9,5 +9,6 @@ add to cart, style
 add stripe api 
 
 
-<!-- work on slug page, fix the page text decoration, work on cart -->
 
+
+Work on navbar, complete cart
